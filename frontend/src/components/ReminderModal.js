@@ -65,7 +65,7 @@ const ReminderModal = ({ event, isOpen, onClose, onReminderSet }) => {
       if (isAuthenticated) {
         const token = localStorage.getItem('token')
         const response = await axios.post(
-          'http://localhost:5000/api/users/reminders',
+          'https://devnotiify-backend-1.onrender.com/api/users/reminders',
           {
             eventId: event.id,
             eventName: event.name,
@@ -155,7 +155,7 @@ const ReminderModal = ({ event, isOpen, onClose, onReminderSet }) => {
     try {
       const token = localStorage.getItem('token')
       await axios.post(
-        'http://localhost:5000/api/test-email',
+        'https://devnotiify-backend-1.onrender.com/api/test-email',
         {},
         {
           headers: {

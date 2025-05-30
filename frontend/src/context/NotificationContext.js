@@ -17,7 +17,7 @@ export const NotificationProvider = ({ children }) => {
     if (!isAuthenticated || !user) return;
 
     // Initialize socket connection
-    const newSocket = io('http://localhost:5000', {
+    const newSocket = io('https://devnotiify-backend-1.onrender.com', {
       auth: {
         token: localStorage.getItem('token')
       }

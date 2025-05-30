@@ -66,7 +66,7 @@ const ConnectionTest = () => {
                   <p className="text-green-600 font-medium">Connection successful</p>
                   <p className="text-gray-600">Latency: {apiTest.latency}ms</p>
                   <p className="text-gray-600">
-                    API URL: {process.env.REACT_APP_API_URL || "http://localhost:5000/api"}
+                    API URL: {process.env.REACT_APP_API_URL || "https://devnotiify-backend-1.onrender.com/api"}
                   </p>
                   {apiTest.data && apiTest.data.environment && (
                     <div className="mt-2 p-2 bg-gray-50 rounded text-xs font-mono">

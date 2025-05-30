@@ -28,7 +28,7 @@ export const AuthProvider = ({ children }) => {
         
         if (token) {
           // Validate token with backend
-          const response = await fetch('http://localhost:5000/api/users/me', {
+          const response = await fetch('https://devnotiify-backend-1.onrender.com/api/users/me', {
             headers: {
               'x-auth-token': token
             }
@@ -97,7 +97,7 @@ export const AuthProvider = ({ children }) => {
       const token = localStorage.getItem("token");
       if (!token) throw new Error("No authentication token");
 
-      const response = await fetch('http://localhost:5000/api/users/me', {
+      const response = await fetch('https://devnotiify-backend-1.onrender.com/api/users/me', {
         headers: {
           'x-auth-token': token
         }

@@ -183,7 +183,7 @@ const EventDetail = ({ event, events, onBack, onViewDetails, onEventDeleted }) =
 
         if (isAuthenticated) {
           const token = localStorage.getItem('token')
-          const response = await fetch('http://localhost:5000/api/users/reminders', {
+          const response = await fetch('https://devnotiify-backend-1.onrender.com/api/users/reminders', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -235,7 +235,7 @@ const EventDetail = ({ event, events, onBack, onViewDetails, onEventDeleted }) =
       console.log('Deleting event:', event.id);
       console.log('Admin token:', localStorage.getItem('adminToken'));
       
-      const response = await fetch(`http://localhost:5000/api/events/${event.id}`, {
+      const response = await fetch(`https://devnotiify-backend-1.onrender.com/api/events/${event.id}`, {
         method: 'DELETE',
         headers: {
           'x-auth-token': localStorage.getItem('adminToken')

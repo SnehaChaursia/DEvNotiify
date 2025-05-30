@@ -5,7 +5,7 @@
 import axios from "axios"
 
 // Get the API URL from environment variables
-const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000/api"
+const API_URL = process.env.REACT_APP_API_URL || "https://devnotiify-backend-1.onrender.com/api"
 
 /**
  * Tests the connection to the backend API
